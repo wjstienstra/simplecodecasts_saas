@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20151119110048) do
     t.datetime "updated_at"
   end
 
-  create_table "rails", force: true do |t|
+  create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20151119110048) do
     t.string   "User"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "plan_id"
   end
 
   add_index "rails", ["email"], name: "index_rails_on_email", unique: true
